@@ -5,13 +5,24 @@ import { Operation } from './enums/operation';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.styl']
+  styleUrls: ['./app.component.styl'],
 })
 export class AppComponent implements OnInit {
   title = 'random-math';
+  private readonly numberOfProblems = 10;
+
+  operation = Operation.Addition;
+  problems: Problem[] = [];
+
+  generateProblems() {
+    this.problems = [];
+
+    for (let i = 0; i < this.numberOfProblems; i++){
+      this.problems.push(new Problem(this.operation));
+    }
+  }
 
   ngOnInit() {
-    const problem = new Problem(Operation.Subtraction);
-    console.log(problem);
+    this.generateProblems();
   }
 }
