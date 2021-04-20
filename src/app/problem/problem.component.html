@@ -1,12 +1,12 @@
-<table>
+<table class="problem">
   <tr>
     <td></td>
-    <td>{{ problem.top }}</td>
+    <td>{{ problem?.top }}</td>
   </tr>
   <tr>
-    <td *ngIf="problem.operation === 'Addition'">+</td>
-    <td *ngIf="problem.operation === 'Subtraction'">-</td>
-    <td *ngIf="problem.operation === 'Multiplication'">x</td>
-    <td>{{ problem.bottom }}</td>
+    <td class="bottom-row" *ngIf="problem?.operation === 'Addition'">+</td>
+    <td class="bottom-row" *ngIf="problem?.operation === 'Subtraction'">-</td>
+    <td class="bottom-row" *ngIf="problem?.operation === 'Multiplication'">x</td>
+    <td class="bottom-row">{{ problem?.bottom }}</td>
   </tr>
 </table>

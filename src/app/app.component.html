@@ -1,22 +1,30 @@
-<label>
-  Addition
-  <input type="radio" [(ngModel)]="operation" value="Addition">
-</label>
-<label>
-  Subtraction
-  <input type="radio" [(ngModel)]="operation" value="Subtraction">
-</label>
-<label>
-  Multiplication
-  <input type="radio" [(ngModel)]="operation" value="Multiplication">
-</label>
-<button type="button" (click)="generateProblems()">Regenerate Questions</button>
+<div class="no-print">
+  <label>
+    Addition
+    <input type="radio" [(ngModel)]="operation" value="Addition">
+  </label>
+  <br>
+  <label>
+    Subtraction
+    <input type="radio" [(ngModel)]="operation" value="Subtraction">
+  </label>
+  <br>
+  <label>
+    Multiplication
+    <input type="radio" [(ngModel)]="operation" value="Multiplication">
+  </label>
+  <br>
+  <button type="button" (click)="generateProblems()">Regenerate Questions</button>
+  <br>
+</div>
 
 <h2>Problems</h2>
-<app-problem *ngFor="let problem of problems" [problem]="problem"></app-problem>
+<div class="problems">
+  <app-problem *ngFor="let problem of problems" [problem]="problem"></app-problem>
+</div>
 
-<h2>Answers</h2>
 <div class="answers">
+<h2>Answers</h2>
   <div *ngFor="let problem of problems; let i= index;">
     <p>{{ i + 1 }}. {{ problem.answer }}</p>
   </div>

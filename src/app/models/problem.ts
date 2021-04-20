@@ -2,8 +2,8 @@ import { Operation } from '../enums/operation';
 export class Problem {
   private readonly MAX = 100;
 
-  top = 0;
-  bottom = 0;
+  top: number;
+  bottom: number;
   answer: number;
   operation: Operation;
 

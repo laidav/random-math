@@ -1,0 +1,17 @@
+$row-height = 300px
+
+.answers
+  margin-top: 200px
+
+.problems
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: $row-height $row-height $row-height;
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

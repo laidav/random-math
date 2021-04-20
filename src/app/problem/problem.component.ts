@@ -9,5 +9,6 @@ import { Problem } from '../models/problem';
 export class ProblemComponent {
  @Input() problem?: Problem;
 
-  constructor() { }
+  constructor() {
+   }
 }

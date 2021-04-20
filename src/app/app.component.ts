@@ -9,7 +9,7 @@ import { Operation } from './enums/operation';
 })
 export class AppComponent implements OnInit {
   title = 'random-math';
-  private readonly numberOfProblems = 10;
+  private readonly numberOfProblems = 9;
 
   operation = Operation.Addition;
   problems: Problem[] = [];
