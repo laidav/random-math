@@ -9,15 +9,16 @@ export class Problem {
 
   constructor(operation: Operation) {
     this.operation = operation;
-    this.top = this.getRandomInt(this.MAX);
 
     switch (operation) {
       case Operation.Subtraction:
+        this.top = this.getRandomInt(this.MAX, 10);
         this.bottom = this.getRandomInt(this.top);
         break;
       default:
+        this.top = this.getRandomInt(this.MAX);
         this.bottom = this.getRandomInt(this.MAX);
-    }
+    };
 
     switch (operation) {
       case Operation.Addition:
@@ -29,7 +30,7 @@ export class Problem {
       case Operation.Multiplication:
         this.answer = this.top * this.bottom;
         break;
-    }
+    };
   }
 
   private getRandomInt(max: number, min: number = 0) {
