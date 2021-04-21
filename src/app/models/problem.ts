@@ -32,8 +32,7 @@ export class Problem {
     }
   }
 
-  private getRandomInt(max: number) {
-    let min = 0;
+  private getRandomInt(max: number, min: number = 0) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
