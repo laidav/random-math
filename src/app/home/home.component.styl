@@ -1,0 +1,41 @@
+$row-height = 300px
+
+.app
+  padding-left: 36px;
+  padding-right: 36px;
+  font-size: 24px;
+
+.answers
+  margin-top: 200px;
+
+.controls
+  display: flex;
+  padding-top: 36px;
+
+  button
+    margin-left: 100px;
+    cursor: pointer;
+
+.problems
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: $row-height $row-height $row-height;
+
+.header
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 16px;
+
+.time
+  margin-left: auto;
+  width: 200px;
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

@@ -1,0 +1,22 @@
+<div class="min-max">
+  <label *ngFor="let number of numbers">
+    Addition
+    <input
+      type="radio"
+      [(ngModel)]="min"
+      [value]="number"
+      (change)="generateQuestion()"
+    >
+  </label>
+</div>
+<div class="min-max">
+  <label *ngFor="let number of numbers">
+    Addition
+    <input
+      type="radio"
+      [(ngModel)]="max"
+      [value]="number"
+      (change)="generateQuestion()"
+    >
+  </label>
+</div>

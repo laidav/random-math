@@ -11,11 +11,11 @@ export class Problem {
     this.operation = operation;
 
     if(operation === Operation.Subtraction) {
-      this.top = this.getRandomInt(this.MAX, 10);
-      this.bottom = this.getRandomInt(this.top);
+      this.top = Problem.getRandomInt(this.MAX, 10);
+      this.bottom = Problem.getRandomInt(this.top);
     } else {
-      this.top = this.getRandomInt(this.MAX);
-      this.bottom = this.getRandomInt(this.MAX);
+      this.top = Problem.getRandomInt(this.MAX);
+      this.bottom = Problem.getRandomInt(this.MAX);
     }
 
     switch (operation) {
@@ -33,7 +33,7 @@ export class Problem {
     };
   }
 
-  private getRandomInt(max: number, min: number = 0) {
+  static getRandomInt(max: number, min: number = 0) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }

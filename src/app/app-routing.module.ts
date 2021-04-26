@@ -1,12 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { QuickMultiplyComponent } from './quick-multiply/quick-multiply.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: AppComponent
-  }
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
+    path: 'quick-multiply',
+    component: QuickMultiplyComponent
+  },
 ];
 
 @NgModule({
