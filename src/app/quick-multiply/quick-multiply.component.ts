@@ -7,11 +7,12 @@ import { Problem } from'../models/problem';
   styleUrls: ['./quick-multiply.component.styl']
 })
 export class QuickMultiplyComponent implements OnInit {
-  min = 1;
   max = 10;
 
   numberOne?: number;
   numberTwo?: number
+
+  showAnswer = false;
 
   numbers = [
     1,
@@ -27,8 +28,9 @@ export class QuickMultiplyComponent implements OnInit {
   ];
 
   generateQuestion(){
-    this.numberOne = Problem.getRandomInt(this.max, this.min);
-    this.numberTwo = Problem.getRandomInt(this.max, this.min);
+    this.numberOne = Problem.getRandomInt(this.max);
+    this.numberTwo = Problem.getRandomInt(10, 1);
+    this.showAnswer = false;
   }
 
   constructor() { }

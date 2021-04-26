@@ -1,22 +1,21 @@
 <div class="min-max">
-  <label *ngFor="let number of numbers">
-    Addition
-    <input
-      type="radio"
-      [(ngModel)]="min"
-      [value]="number"
-      (change)="generateQuestion()"
-    >
-  </label>
+  <span>Max</span>
+  <fieldset id="group2">
+    <label *ngFor="let number of numbers">
+      <input
+        type="radio"
+        [(ngModel)]="max"
+        [value]="number"
+        (change)="generateQuestion()"
+        name="group2"
+      >
+      {{ number }}
+    </label>
+  </fieldset>
 </div>
-<div class="min-max">
-  <label *ngFor="let number of numbers">
-    Addition
-    <input
-      type="radio"
-      [(ngModel)]="max"
-      [value]="number"
-      (change)="generateQuestion()"
-    >
-  </label>
+<div class="question">
+  <div>What is:</div>
+  <div>{{ numberOne }} x {{ numberTwo }} = {{ showAnswer && numberOne && numberTwo ? numberOne * numberTwo : '?' }}</div>
+  <button type="button" (click)="showAnswer = true">Show Answer</button>
+  <button type="button" (click)="generateQuestion()">Next Question</button>
 </div>
