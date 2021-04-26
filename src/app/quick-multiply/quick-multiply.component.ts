@@ -28,7 +28,7 @@ export class QuickMultiplyComponent implements OnInit {
   ];
 
   generateQuestion(){
-    this.numberOne = Problem.getRandomInt(this.max);
+    this.numberOne = Problem.getRandomInt(this.max, 1);
     this.numberTwo = Problem.getRandomInt(10, 1);
     this.showAnswer = false;
   }
