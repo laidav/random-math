@@ -16,6 +16,5 @@
 <div class="question">
   <div>What is:</div>
   <div>{{ numberOne }} x {{ numberTwo }} = {{ showAnswer && numberOne && numberTwo ? numberOne * numberTwo : '?' }}</div>
-  <button type="button" (click)="showAnswer = true">Show Answer</button>
-  <button type="button" (click)="generateQuestion()" [disabled]="!showAnswer">Next Question</button>
 </div>
+<p>Press "Enter" to continue</p>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Problem } from'../models/problem';
 
 @Component({
@@ -14,18 +14,16 @@ export class QuickMultiplyComponent implements OnInit {
 
   showAnswer = false;
 
-  numbers = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-  ];
+  numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  @HostListener('document:keypress', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) { 
+    if(event.key === 'Enter')
+      this.next();
+  }
+
+
+  constructor() { }
 
   generateQuestion(){
     this.numberOne = Problem.getRandomInt(this.max, 1);
@@ -33,7 +31,13 @@ export class QuickMultiplyComponent implements OnInit {
     this.showAnswer = false;
   }
 
-  constructor() { }
+  next() {
+    if(this.showAnswer) {
+      this.generateQuestion();
+    } else {
+      this.showAnswer = true;
+    }
+  }
 
   ngOnInit(): void {
     this.generateQuestion();
