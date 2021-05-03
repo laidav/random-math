@@ -7,6 +7,7 @@ import { Problem } from'../models/problem';
   styleUrls: ['./quick-multiply.component.styl']
 })
 export class QuickMultiplyComponent implements OnInit {
+  count = 0;
   max = 10;
 
   numberOne?: number;
@@ -34,6 +35,7 @@ export class QuickMultiplyComponent implements OnInit {
   next() {
     if(this.showAnswer) {
       this.generateQuestion();
+      this.count++;
     } else {
       this.showAnswer = true;
     }
