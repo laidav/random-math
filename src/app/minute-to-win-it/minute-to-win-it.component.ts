@@ -39,10 +39,10 @@ export class MinuteToWinItComponent implements OnInit {
   }
 
   reset() {
+    this.generateRandomNotes();
     this.noteIndex = 0;
     this.done = false;
     this.showAnswer = false;
-    this.generateRandomNotes();
   }
 
   generateRandomNotes () {
