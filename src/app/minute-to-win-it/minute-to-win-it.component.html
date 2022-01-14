@@ -1,3 +1,7 @@
+<div class="controls">
+	<div>Press "Enter" to continue</div>
+	<button class="reset" (click)="reset()">Reset</button>
+</div>
 <div class="notes">
 	<div [hidden]="noteIndex !== i" *ngFor="let note of notes; let i = index;">
 		<div class="notes__inner">
@@ -5,11 +9,10 @@
 			<div class="notes__answer" *ngIf="showAnswer">
 				{{ note.answer }}
 			</div>
+			<div *ngIf="done" class="notes__done">Done!</div>
 		</div>
 	</div>
 </div>
-<p>Press "Enter" to continue</p>
-<div class="bunnies">
-  <img *ngFor="let bunny of [].constructor(noteIndex) " src="/assets/bunny.png" width="100" />
+<div class="ponies">
+  <img *ngFor="let pony of [].constructor(noteIndex) " src="/assets/Alicorn.png" width="100" />
 </div>
-<div class="reset" (click)="reset()">Click here to reset</div>

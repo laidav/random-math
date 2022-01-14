@@ -40,6 +40,8 @@ export class MinuteToWinItComponent implements OnInit {
 
   reset() {
     this.noteIndex = 0;
+    this.done = false;
+    this.showAnswer = false;
     this.generateRandomNotes();
   }
 
