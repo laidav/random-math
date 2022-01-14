@@ -13,6 +13,7 @@ export class MinuteToWinItComponent implements OnInit {
   noteIndex = 0;
   showAnswer = false;
   notes: Note[] = [];
+  done = false;
 
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) { 
@@ -23,6 +24,12 @@ export class MinuteToWinItComponent implements OnInit {
   constructor() { }
 
   next() {
+    if (this.noteIndex === this.notes.length - 1 || this.done) {
+      this.showAnswer = true;
+      this.done = true;
+      return;
+    }
+
     if (this.showAnswer) {
       this.showAnswer = false;
       this.noteIndex++;
