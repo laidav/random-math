@@ -15,12 +15,6 @@ export class MinuteToWinItComponent implements OnInit {
   notes: Note[] = [];
   done = false;
 
-  @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) { 
-    if (event.key === 'Enter')
-      this.next();
-  }
-
   constructor() { }
 
   next() {
