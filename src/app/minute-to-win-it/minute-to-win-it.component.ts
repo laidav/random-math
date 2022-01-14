@@ -14,8 +14,14 @@ export class MinuteToWinItComponent implements OnInit {
   showAnswer = false;
   notes: Note[] = [];
   done = false;
+  errors = 0;
 
   constructor() { }
+
+  penalty() {
+    if (this.errors < this.noteIndex && !this.showAnswer)
+      this.errors++;
+  }
 
   next() {
     if (this.noteIndex === this.notes.length - 1 || this.done) {
@@ -37,6 +43,7 @@ export class MinuteToWinItComponent implements OnInit {
     this.noteIndex = 0;
     this.done = false;
     this.showAnswer = false;
+    this.errors = 0;
   }
 
   generateRandomNotes () {
