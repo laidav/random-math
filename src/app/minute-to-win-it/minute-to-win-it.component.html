@@ -1,0 +1,15 @@
+<div class="notes">
+	<div [hidden]="noteIndex !== i" *ngFor="let note of notes; let i = index;">
+		<div class="notes__inner">
+			<img class="notes__image" src="{{ note.url }}" />
+			<div class="notes__answer" *ngIf="showAnswer">
+				{{ note.answer }}
+			</div>
+		</div>
+	</div>
+</div>
+<p>Press "Enter" to continue</p>
+<div class="bunnies">
+  <img *ngFor="let bunny of [].constructor(noteIndex) " src="/assets/bunny.png" width="100" />
+</div>
+<div class="reset" (click)="reset()">Click here to reset</div>

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProblemComponent } from './problem/problem.component';
 import { QuickMultiplyComponent } from './quick-multiply/quick-multiply.component';
 import { HomeComponent } from './home/home.component';
+import { MinuteToWinItComponent } from './minute-to-win-it/minute-to-win-it.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProblemComponent,
     QuickMultiplyComponent,
-    HomeComponent
+    HomeComponent,
+    MinuteToWinItComponent
   ],
   imports: [
     BrowserModule,

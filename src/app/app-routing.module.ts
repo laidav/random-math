@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { QuickMultiplyComponent } from './quick-multiply/quick-multiply.component';
+import { MinuteToWinItComponent } from './minute-to-win-it/minute-to-win-it.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'quick-multiply',
     component: QuickMultiplyComponent
+  },
+  {
+    path: 'minute-to-win-it',
+    component: MinuteToWinItComponent
   },
 ];
 
