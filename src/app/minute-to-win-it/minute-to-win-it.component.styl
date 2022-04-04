@@ -40,5 +40,22 @@
 	display: flex
 	flex-wrap: wrap
 
+	&__card
+		height: 150px
+		width: 150px
+		background-size: cover
+		background-position: center center
+
+		&:nth-child(n)
+			background-image: url("../../assets/rainbowdash.png")
+		&:nth-child(2n)
+			background-image: url("../../assets/pinkypie.jpg")
+		&:nth-child(3n)
+			background-image: url("../../assets/celestia.jpg")
+		&:nth-child(4n)
+			background-image: url("../../assets/luna.jpg")
+		&:nth-child(5n)
+			background-image: url("../../assets/cadance.webp")
+
 	img
 		margin-right: 24px

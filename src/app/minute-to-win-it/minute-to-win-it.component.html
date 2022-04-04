@@ -19,6 +19,6 @@
 </div>
 <div class="ponies">
 	<ng-container *ngIf="errors <= noteIndex">
-  	<img *ngFor="let pony of [].constructor(noteIndex - errors) " src="/assets/rainbowdash.png" width="100" />
+    <div *ngFor="let pony of [].constructor(noteIndex - errors)" class="ponies__card"></div>
 	</ng-container>
 </div>
